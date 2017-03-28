@@ -1,14 +1,116 @@
 @import 'utility';
+$aqua: #85dbc2;
+$golden: #e8b866;
+$darkgray: #bcbdc0;
+$lightgray: #929598;
 
 $base-text-size: 16px;
-$base-font-family: sans-serif;
+$base-font-family: 'Raleway', sans-serif;
+$base-font-weight: 400;
+$sheeraqua: rgba(#85dbc2, .8);
 
+h1,
+h2,
+h3 {
+  margin: 5px;
+}
 html {
   text-size-adjust: 100%;
 }
 
 body {
-  @include font-smoothing(on);
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navLinks {
+  display: flex;
+  height: 75px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+ul {
+  display: flex;
+  background-color: $sheeraqua;
+  margin: 0;
+  width: 80%;
+  list-style: none;
+  justify-content: space-around;
+
+  li {
+    flex: 0 1 auto;
+    justify-content: flex-end;
+    width: 150px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+  // @mixin links( $normal, $visited, $hover ) {
+  //   &:visited {
+  //     color: $visited;
+  //   }
+  //   &:hover, &:active, &:focus {
+  //     color: $hover;
+  //   }
+  // }
+
+.mainContainer {
+  display: flex;
+  height: 600px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: $aqua;
+  background-image: url('http://i.imgur.com/PwUvsiW.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 5px solid $golden;
+  border-bottom: 5px solid $golden;
+}
+
+.boxHD1 {
+  display: flex;
+  border: thick solid lightgray;
+  border-radius: 50%;
+  padding: 2px;
+  margin-left: 5%;
+  position: absolute;
+  bottom: 10px;
+  z-index: 99;
+}
+
+.boxHD2 {
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  align-items: flex-start;
+  position: absolute;
+  padding: 10px;
+  bottom: 50px;
+  left: 0;
+  width: 80%;
+  height: 110px;
+  background-color: $sheeraqua;
+  border-radius: 5px;
+  color: white;
+}
+.boxHD2 h1, h2, h3 {
+  margin-left: 40%;
+}
+
+.textContent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+p {
+  align-content: flex-start;
 }
